@@ -36,7 +36,7 @@ namespace Xiao_Music_3
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
-            fdp = new Thread(novoForm1);
+            fdp = new Thread(novoForm2);
             fdp.SetApartmentState(ApartmentState.STA);
             fdp.Start();
         }

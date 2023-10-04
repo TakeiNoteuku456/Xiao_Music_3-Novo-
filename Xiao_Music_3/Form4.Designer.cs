@@ -33,8 +33,8 @@
             this.TextAdicionar = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonPlayMarceline = new System.Windows.Forms.Button();
             this.buttonStopMarceline = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Voltar
@@ -79,18 +79,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Em desenvolvimento";
             // 
-            // buttonPlayMarceline
-            // 
-            this.buttonPlayMarceline.BackColor = System.Drawing.Color.Transparent;
-            this.buttonPlayMarceline.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonPlayMarceline.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonPlayMarceline.Location = new System.Drawing.Point(167, 195);
-            this.buttonPlayMarceline.Name = "buttonPlayMarceline";
-            this.buttonPlayMarceline.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.buttonPlayMarceline.Size = new System.Drawing.Size(44, 45);
-            this.buttonPlayMarceline.TabIndex = 5;
-            this.buttonPlayMarceline.UseVisualStyleBackColor = false;
-            // 
             // buttonStopMarceline
             // 
             this.buttonStopMarceline.BackColor = System.Drawing.Color.Transparent;
@@ -102,6 +90,20 @@
             this.buttonStopMarceline.Size = new System.Drawing.Size(44, 47);
             this.buttonStopMarceline.TabIndex = 6;
             this.buttonStopMarceline.UseVisualStyleBackColor = false;
+            this.buttonStopMarceline.Click += new System.EventHandler(this.buttonStopMarceline_Click);
+            // 
+            // button27
+            // 
+            this.button27.BackColor = System.Drawing.Color.Transparent;
+            this.button27.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button27.BackgroundImage")));
+            this.button27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button27.ForeColor = System.Drawing.Color.Transparent;
+            this.button27.Location = new System.Drawing.Point(167, 193);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(44, 47);
+            this.button27.TabIndex = 80;
+            this.button27.UseVisualStyleBackColor = false;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
             // Form4
             // 
@@ -110,12 +112,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.button27);
             this.Controls.Add(this.buttonStopMarceline);
-            this.Controls.Add(this.buttonPlayMarceline);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TextAdicionar);
             this.Controls.Add(this.Voltar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form4";
             this.Text = "Form4";
             this.ResumeLayout(false);
@@ -129,7 +132,7 @@
         private System.Windows.Forms.TextBox TextAdicionar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonPlayMarceline;
         private System.Windows.Forms.Button buttonStopMarceline;
+        private System.Windows.Forms.Button button27;
     }
 }

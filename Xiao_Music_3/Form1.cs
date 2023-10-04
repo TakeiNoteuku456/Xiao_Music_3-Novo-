@@ -207,5 +207,10 @@ namespace Xiao_Music_3
 
             UpdateListView();
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

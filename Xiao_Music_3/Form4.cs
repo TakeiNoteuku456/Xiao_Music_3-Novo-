@@ -9,12 +9,14 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using static System.Net.WebRequestMethods;
 
 namespace Xiao_Music_3
 {
     public partial class Form4 : Form
     {
+        private SoundPlayer player;
         Thread fdp;
         public Form4()
         {
@@ -28,10 +30,18 @@ namespace Xiao_Music_3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String Adicionar = TextAdicionar.Text;
-            SoundPlayer Musica = new SoundPlayer();
-            Musica.SoundLocation = Adicionar;
-            Musica.Play();
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Arquivos de Áudio (*.wav)|*.wav";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                if (player != null)
+                {
+                    player.Stop();
+                    player.Dispose();
+                }
+                player = new SoundPlayer(openFileDialog.FileName);
+            }
         }
 
         private void Voltar_Click(object sender, EventArgs e)
@@ -44,6 +54,23 @@ namespace Xiao_Music_3
         private void novoForm()
         {
             Application.Run(new Form2());
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            if (player != null)
+            {
+                player.Play();
+            }
+        }
+
+        private void buttonStopMarceline_Click(object sender, EventArgs e)
+        {
+
+            if (player != null)
+            {
+                player.Stop();
+            }
         }
     }
 }
