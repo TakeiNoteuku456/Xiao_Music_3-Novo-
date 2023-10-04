@@ -33,13 +33,5 @@ namespace Xiao_Music_3
                 connection.CloseConnection();
             }
         }
-        private void ListView1_LR_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            int index;
-            index = listView1.FocusedItem.Index;
-            id = int.Parse(listView1.Items[index].SubItems[0].Text);
-            textnome.Text = listView1.Items[index].SubItems[1].Text;
-            textsenha.Text = listView1.Items[index].SubItems[2].Text;
-        }
     }
 }
