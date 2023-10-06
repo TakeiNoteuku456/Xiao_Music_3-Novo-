@@ -81,6 +81,8 @@ namespace Xiao_Music_3
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            Form2 Form2 = new Form2();
+            Form2.Show();
             this.Close();
         }
         private void pictureBox19_Click(object sender, EventArgs e)

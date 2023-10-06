@@ -98,6 +98,8 @@ namespace Xiao_Music_3
             String senha = textsenha.Text;
             if (name == "" && senha == "")
             {
+                Form2 Form2 = new Form2();
+                Form2.Show();
                 this.Close();
             }
             else

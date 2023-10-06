@@ -22,15 +22,21 @@ namespace Xiao_Music_3
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Form3 Form3 = new Form3();
+            Form3.Show();
             this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Form4 Form4 = new Form4();
+            Form4.Show();
             this.Close();
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            Form1 Form1 = new Form1();
+            Form1.Show();
             this.Close();
         }
     }
