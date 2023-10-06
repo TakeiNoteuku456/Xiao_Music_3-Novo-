@@ -26,7 +26,6 @@ namespace Xiao_Music_3
         //se não conseguir abrir o programa vai no Forms3.Cs, e apaga os caminhos da musica(.wav)
         //Meu programa não está completo ainda preciso arrumar o forms4 e colocar mais musicas, mas o resto está funcionando
         private int id;
-        Thread fdp;
         public Form1()
         {
             InitializeComponent();
@@ -100,9 +99,6 @@ namespace Xiao_Music_3
             if (name == "" && senha == "")
             {
                 this.Close();
-                fdp = new Thread(novoForm);
-                fdp.SetApartmentState(ApartmentState.STA);
-                fdp.Start();
             }
             else
             {
@@ -114,10 +110,6 @@ namespace Xiao_Music_3
                 MessageBoxIcon.Information
                     );
             }
-        }
-        private void novoForm()
-        {
-            Application.Run(new Form2());
         }
 
         private void button3_Click(object sender, EventArgs e)

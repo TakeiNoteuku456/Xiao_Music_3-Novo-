@@ -23,7 +23,6 @@ namespace Xiao_Music_3
         //Meu programa não está completo ainda preciso arrumar o forms4 e colocar mais musicas, mas o resto está funcionando
         SoundPlayer MusicaMarceline, MusicaAki, MusicaGojo, MusicaKurapika, MusicaDanHeng, MusicaChainsaw, MusicaNeon, MusicaJustAwake, MusicaSunflower, MusicaSerotonin, MusicaTaki1;
         SoundPlayer Whativedone, MeunovoMundo, Paradise, TheNights, TheLazySong, HappierThanEver, WaitAMinute, Riptide, LoversRock, Seusol, MakimaDenji, lampadasnegras, Tanjiro, Extravagante;
-        Thread fdp;
 
         public Form3()
         {
@@ -80,16 +79,9 @@ namespace Xiao_Music_3
             Extravagante.SoundLocation = @"C:\Users\CJ3016757\Downloads\MusicaXiao_Music\RapdoTenge Uzui(Demon Slayer)EXTRAVAGANTE.wav";
 
         }
-        private void novoForm()
-        {
-            Application.Run(new Form2());
-        }
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            fdp = new Thread(novoForm);
-            fdp.SetApartmentState(ApartmentState.STA);
-            fdp.Start();
         }
         private void pictureBox19_Click(object sender, EventArgs e)
         {
