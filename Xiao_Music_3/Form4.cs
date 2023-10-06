@@ -46,14 +46,9 @@ namespace Xiao_Music_3
 
         private void Voltar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            fdp = new Thread(novoForm);
-            fdp.SetApartmentState(ApartmentState.STA);
-            fdp.Start();
-        }
-        private void novoForm()
-        {
-            Application.Run(new Form2());
+            Form2 Form2 = new Form2();
+            Form2.Show();
+            this.Hide();
         }
 
         private void button27_Click(object sender, EventArgs e)

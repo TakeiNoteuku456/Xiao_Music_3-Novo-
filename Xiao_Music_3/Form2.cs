@@ -24,20 +24,20 @@ namespace Xiao_Music_3
         {
             Form3 Form3 = new Form3();
             Form3.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Form4 Form4 = new Form4();
             Form4.Show();
-            this.Close();
+            this.Hide();
         }
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 Form1 = new Form1();
             Form1.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }
