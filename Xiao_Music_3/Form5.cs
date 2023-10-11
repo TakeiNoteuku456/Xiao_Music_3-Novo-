@@ -14,9 +14,9 @@ using System.Windows.Forms;
 
 namespace Xiao_Music_3
 {
-    public partial class Form5 : Form
+    public partial class Youtube : Form
     {
-        public Form5()
+        public Youtube()
         {
             InitializeComponent();
             InitializeChromium();
@@ -31,7 +31,7 @@ namespace Xiao_Music_3
             CefSettings settings = new CefSettings();
             Cef.Initialize(settings);
 
-            ChromiumWebBrowser chromeBrowser = new ChromiumWebBrowser("https://www.youtube.com");
+            ChromiumWebBrowser chromeBrowser = new ChromiumWebBrowser("https://www.youtube.com/");
             this.Controls.Add(chromeBrowser);
             chromeBrowser.Dock = DockStyle.Fill;
         }

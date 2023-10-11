@@ -1,6 +1,6 @@
 ﻿namespace Xiao_Music_3
 {
-    partial class Form5
+    partial class Youtube
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Youtube));
             this.SuspendLayout();
             // 
-            // Form5
+            // Youtube
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form5";
+            this.Name = "Youtube";
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
             this.ResumeLayout(false);

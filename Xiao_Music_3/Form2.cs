@@ -42,7 +42,7 @@ namespace Xiao_Music_3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form5 Form5 = new Form5();
+            Youtube Form5 = new Youtube();
             Form5.Show();
             this.Hide();
         }
