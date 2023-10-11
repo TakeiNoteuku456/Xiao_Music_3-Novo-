@@ -47,37 +47,17 @@ namespace Xiao_Music_3
         {
             listView1.Items.Clear();
 
-            Connection conn = new Connection();
-            SqlCommand sqlCom = new SqlCommand();
-
-            sqlCom.Connection = conn.ReturnConnection();
-            sqlCom.CommandText = "SELECT * FROM Table_1";
-
             try
             {
-                SqlDataReader dr = sqlCom.ExecuteReader();
-
                 //Enquanto for possível continuar a leitura das linhas que foram retornadas na consulta, execute.
-                while (dr.Read())
-                {
-                    int id = (int)dr["id"];
-                    string name = (string)dr["Nome"];
-                    string Senha = (string)dr["Senha"];
-
                     ListViewItem lv = new ListViewItem(id.ToString());
                     lv.SubItems.Add(name);
                     lv.SubItems.Add(Senha);
                     listView1.Items.Add(lv);
                 }
-                dr.Close();
-            }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
-            }
-            finally
-            {
-                conn.CloseConnection();
             }
         }
         private void button1_Click(object sender, EventArgs e)
