@@ -12,6 +12,22 @@ namespace Xiao_Music_3
 {
     internal class UsuarioDAO
     {
+        public void InsertUser(Usuario usuario)
+        {
+            Connection connection = new Connection();
+            SqlCommand sqlCommand = new SqlCommand();
+
+            sqlCommand.Connection = connection.ReturnConnection();
+            sqlCommand.CommandText = @"INSERT INTO Table_1 VALUES(@nome,@senha)";
+
+            sqlCommand.Parameters.AddWithValue("@nome", usuario.Nome);
+            sqlCommand.Parameters.AddWithValue("@senha", usuario.Senha);
+            sqlCommand.ExecuteNonQuery();
+            MessageBox.Show("Cadastro com sucesso",
+                "AVISO",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+        }
         public void DeleteUsuario(int id)
         {
             Connection connection = new Connection();

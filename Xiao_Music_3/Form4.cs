@@ -17,7 +17,6 @@ namespace Xiao_Music_3
     public partial class Form4 : Form
     {
         private SoundPlayer player;
-        Thread fdp;
         public Form4()
         {
             InitializeComponent();

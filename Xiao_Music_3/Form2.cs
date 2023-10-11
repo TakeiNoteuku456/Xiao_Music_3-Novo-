@@ -39,6 +39,13 @@ namespace Xiao_Music_3
             Form1.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form5 Form5 = new Form5();
+            Form5.Show();
+            this.Hide();
+        }
     }
 }
 

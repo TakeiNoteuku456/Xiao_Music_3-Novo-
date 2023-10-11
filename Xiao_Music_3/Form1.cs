@@ -14,6 +14,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+//Connection connection = new Connection();
+//SqlCommand sqlCommand = new SqlCommand();
+
+//sqlCommand.Connection = connection.ReturnConnection();
+//sqlCommand.CommandText = @"INSERT INTO Table_1 VALUES(@nome,@senha)";
+
+//sqlCommand.Parameters.AddWithValue("@nome", textnome.Text);
+//sqlCommand.Parameters.AddWithValue("@senha", textsenha.Text);
+//sqlCommand.ExecuteNonQuery();
 
 namespace Xiao_Music_3
 {
@@ -116,24 +125,31 @@ namespace Xiao_Music_3
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Connection connection = new Connection();
-            SqlCommand sqlCommand = new SqlCommand();
+            try
+            {
+                //Criar objeto da Classe Usuario
+                Usuario usuario = new Usuario(
+                    textnome.Text,
+                    textsenha.Text);
+                //chamando o metodo de exclusão
+                UsuarioDAO nomeDoObj = new UsuarioDAO();
+                nomeDoObj.InsertUser(usuario);
 
-            sqlCommand.Connection = connection.ReturnConnection();
-            sqlCommand.CommandText = @"INSERT INTO Table_1 VALUES(@nome,@senha)";
-
-            sqlCommand.Parameters.AddWithValue("@nome", textnome.Text);
-            sqlCommand.Parameters.AddWithValue("@senha", textsenha.Text);
-            sqlCommand.ExecuteNonQuery();
-            MessageBox.Show("Cadastro com sucesso",
+                MessageBox.Show("Cadastro com sucesso",
                 "AVISO",
             MessageBoxButtons.OK,
             MessageBoxIcon.Information);
 
-            textnome.Clear();
-            textsenha.Clear();
-            UpdateListView();
+                textnome.Clear();
+                textsenha.Clear();
+                UpdateListView();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
         }
+
         private void ListView1_LR_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int index;

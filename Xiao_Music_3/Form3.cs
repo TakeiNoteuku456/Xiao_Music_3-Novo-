@@ -50,7 +50,7 @@ namespace Xiao_Music_3
             MusicaTaki1 = new SoundPlayer();
             MusicaTaki1.SoundLocation = @"C:\Users\CJ3016757\Downloads\MusicaXiao_Music\LeahciM-SeunomeYourName.wav";
             Whativedone = new SoundPlayer();
-            Whativedone.SoundLocation = @"C:\Users\CJ3016757\Downloads\MusicaXiao_Music\WhatI'veDoneLinkinPark.wav";
+            Whativedone.SoundLocation = @"C:\Users\CJ3016757\Downloads\MusicaXiao_Music\WhatI_veDoneLinkinPark.wav";
             MeunovoMundo = new SoundPlayer();
             MeunovoMundo.SoundLocation = @"C:\Users\CJ3016757\Downloads\MusicaXiao_Music\CharlieBrownJr.MeuNovoMundo.wav";
             Paradise = new SoundPlayer();
