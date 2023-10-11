@@ -18,7 +18,7 @@ namespace Xiao_Music_3
             //(int)dr["Id"],
             //(string)dr["nome"],
             //(string)dr["senha"]
-            //);
+            //); 
             Connection conn = new Connection();
             SqlCommand sqlCom = new SqlCommand();
 
