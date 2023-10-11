@@ -31,13 +31,20 @@ namespace Xiao_Music_3
             CefSettings settings = new CefSettings();
             Cef.Initialize(settings);
 
-            ChromiumWebBrowser chromeBrowser = new ChromiumWebBrowser("https://www.youtube.com/");
+            ChromiumWebBrowser chromeBrowser = new ChromiumWebBrowser("https://www.friv.com/new.html");
             this.Controls.Add(chromeBrowser);
             chromeBrowser.Dock = DockStyle.Fill;
         }
         private void Form5_FormClosing(object sender, FormClosingEventArgs e)
         {
             Cef.Shutdown();
+        }
+
+        private void Volta_Click(object sender, EventArgs e)
+        {
+            Form2 Form2 = new Form2();
+            Form2.Show();
+            this.Hide();
         }
     }
 }

@@ -19,6 +19,14 @@ namespace Xiao_Music_3
             Nome = nome;
             Senha = senha;
         }
+        public Usuario(int id,
+            string nome,
+            string senha)
+        {
+            Nome = nome;
+            Senha = senha;
+            Id = id;
+        }
         public int Id
         {
              set { _id = value; }

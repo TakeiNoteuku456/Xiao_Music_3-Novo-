@@ -12,7 +12,47 @@ namespace Xiao_Music_3
 {
     internal class UsuarioDAO
     {
-        public void InsertUser(Usuario usuario)
+        public List<Usuario> SelectUsuario()
+        {
+            //Usuario objeto = new Usuario(
+            //(int)dr["Id"],
+            //(string)dr["nome"],
+            //(string)dr["senha"]
+            //);
+            Connection conn = new Connection();
+            SqlCommand sqlCom = new SqlCommand();
+
+            sqlCom.Connection = conn.ReturnConnection();
+            sqlCom.CommandText = "SELECT * FROM Table_1";
+            List<Usuario> usuarios = new List<Usuario>();
+            try
+            {
+                SqlDataReader dr = sqlCom.ExecuteReader();
+
+                //Enquanto for possível continuar a leitura das linhas que foram retornadas na consulta, execute.
+                while (dr.Read())
+                {
+                    int id = (int)dr["id"];
+                    string name = (string)dr["Nome"];
+                    string Senha = (string)dr["Senha"];
+
+                    ListViewItem lv = new ListViewItem(id.ToString());
+                    lv.SubItems.Add(name);
+                    lv.SubItems.Add(Senha);
+                }
+                dr.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            finally
+            {
+                conn.CloseConnection();
+            }
+            return null;
+        }
+    public void InsertUsuario(Usuario usuario)
         {
             Connection connection = new Connection();
             SqlCommand sqlCommand = new SqlCommand();

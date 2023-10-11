@@ -133,7 +133,7 @@ namespace Xiao_Music_3
                     textsenha.Text);
                 //chamando o metodo de exclusão
                 UsuarioDAO nomeDoObj = new UsuarioDAO();
-                nomeDoObj.InsertUser(usuario);
+                nomeDoObj.InsertUsuario(usuario);
 
                 MessageBox.Show("Cadastro com sucesso",
                 "AVISO",
