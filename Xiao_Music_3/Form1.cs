@@ -46,15 +46,20 @@ namespace Xiao_Music_3
         private void UpdateListView()
         {
             listView1.Items.Clear();
-
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            List<Usuario> usuarios = new List<Usuario>();
             try
             {
-                //Enquanto for possível continuar a leitura das linhas que foram retornadas na consulta, execute.
-                    ListViewItem lv = new ListViewItem(id.ToString());
-                    lv.SubItems.Add(name);
-                    lv.SubItems.Add(Senha);
+                foreach (Usuario usuario in usuarios)
+                {
+
+                    //Enquanto for possível continuar a leitura das linhas que foram retornadas na consulta, execute.
+                    ListViewItem lv = new ListViewItem(usuario.Id.ToString());
+                    lv.SubItems.Add(usuario.Nome);
+                    lv.SubItems.Add(usuario.Senha);
                     listView1.Items.Add(lv);
                 }
+            }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);

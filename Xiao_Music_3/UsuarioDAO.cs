@@ -36,6 +36,13 @@ namespace Xiao_Music_3
                     string name = (string)dr["Nome"];
                     string Senha = (string)dr["Senha"];
 
+                    Usuario objeto = new Usuario(
+                    (int)dr["Id"],
+                    (string)dr["nome"],
+                    (string)dr["senha"]
+                    );
+                    
+
                     ListViewItem lv = new ListViewItem(id.ToString());
                     lv.SubItems.Add(name);
                     lv.SubItems.Add(Senha);
