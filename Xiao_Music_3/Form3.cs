@@ -23,7 +23,7 @@ namespace Xiao_Music_3
         //Meu programa não está completo ainda preciso arrumar o forms4 e colocar mais musicas, mas o resto está funcionando
         SoundPlayer MusicaMarceline, MusicaAki, MusicaGojo, MusicaKurapika, MusicaDanHeng, MusicaChainsaw, MusicaNeon, MusicaJustAwake, MusicaSunflower, MusicaSerotonin, MusicaTaki1;
         SoundPlayer Whativedone, MeunovoMundo, Paradise, TheNights, TheLazySong, HappierThanEver, WaitAMinute, Riptide, LoversRock, Seusol, MakimaDenji, lampadasnegras, Tanjiro, Extravagante;
-
+        SoundPlayer YouEI, Lovely, SelfLove, transparentsoul, SpaceSong;
         public Form3()
         {
             InitializeComponent();
@@ -77,6 +77,7 @@ namespace Xiao_Music_3
             Tanjiro.SoundLocation = @"C:\Users\CJ3016757\Downloads\MusicaXiao_Music\Tanjiro(Kimetsu no Yaiba)ALuzResplandeceHenrique Mendonça.wav";
             Extravagante = new SoundPlayer();
             Extravagante.SoundLocation = @"C:\Users\CJ3016757\Downloads\MusicaXiao_Music\RapdoTenge Uzui(Demon Slayer)EXTRAVAGANTE.wav";
+            //colocar o resto das musicas..
 
         }
         private void button1_Click(object sender, EventArgs e)
@@ -99,7 +100,7 @@ namespace Xiao_Music_3
         }
         private void button31_Click(object sender, EventArgs e)
         {
-            MusicaAki.Play();  
+            MusicaAki.Play();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -290,6 +291,38 @@ namespace Xiao_Music_3
         private void button25_Click(object sender, EventArgs e)
         {
             Extravagante.Stop();
+        }
+        private void button51_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void button60_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void button53_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void button58_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void button54_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void button57_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void button56_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void button55_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
