@@ -29,9 +29,10 @@ namespace Xiao_Music_3
         private void InitializeChromium()
         {
             CefSettings settings = new CefSettings();
-            Cef.Initialize(settings);
+            Cef.Initialize(settings);//Tirar o bo~tão de voltar da Chris
 
-            ChromiumWebBrowser chromeBrowser = new ChromiumWebBrowser("https://www.friv.com/new.html");
+
+            ChromiumWebBrowser chromeBrowser = new ChromiumWebBrowser("https://www.youtube.com/");
             this.Controls.Add(chromeBrowser);
             chromeBrowser.Dock = DockStyle.Fill;
         }
@@ -39,6 +40,6 @@ namespace Xiao_Music_3
         {
             Cef.Shutdown();
         }
-
+        
     }
 }

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.Voltar = new System.Windows.Forms.Button();
-            this.TextAdicionar = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonStopMarceline = new System.Windows.Forms.Button();
@@ -47,15 +46,6 @@
             this.Voltar.TabIndex = 1;
             this.Voltar.UseVisualStyleBackColor = true;
             this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
-            // 
-            // TextAdicionar
-            // 
-            this.TextAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextAdicionar.Location = new System.Drawing.Point(84, 135);
-            this.TextAdicionar.Name = "TextAdicionar";
-            this.TextAdicionar.Size = new System.Drawing.Size(365, 44);
-            this.TextAdicionar.TabIndex = 2;
-            this.TextAdicionar.TextChanged += new System.EventHandler(this.TextAdicionar_TextChanged);
             // 
             // button1
             // 
@@ -116,7 +106,6 @@
             this.Controls.Add(this.buttonStopMarceline);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.TextAdicionar);
             this.Controls.Add(this.Voltar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form4";
@@ -129,7 +118,6 @@
         #endregion
 
         private System.Windows.Forms.Button Voltar;
-        private System.Windows.Forms.TextBox TextAdicionar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonStopMarceline;

@@ -18,7 +18,8 @@ namespace Xiao_Music_3
             SqlCommand sqlCom = new SqlCommand();
 
             sqlCom.Connection = conn.ReturnConnection();
-            sqlCom.CommandText = "SELECT * FROM Table_1";
+            sqlCom.CommandText = "SELECT * FROM Student";
+
             List<Usuario> usuarios = new List<Usuario>();
             try
             {
@@ -29,16 +30,14 @@ namespace Xiao_Music_3
                 {
                     Usuario objeto = new Usuario(
                     (int)dr["Id"],
-                    (string)dr["nome"],
-                    (string)dr["senha"]
+                    (string)dr["Nome"],
+                    (string)dr["Senha"]
                     );
-                    
 
-                    ListViewItem lv = new ListViewItem(id.ToString());
-                    lv.SubItems.Add(name);
-                    lv.SubItems.Add(Senha);
+                    usuarios.Add(objeto);
                 }
                 dr.Close();
+                return usuarios;//retornar a lista
             }
             catch (Exception err)
             {
@@ -50,13 +49,16 @@ namespace Xiao_Music_3
             }
             return null;
         }
+
     public void InsertUsuario(Usuario usuario)
         {
             Connection connection = new Connection();
             SqlCommand sqlCommand = new SqlCommand();
 
             sqlCommand.Connection = connection.ReturnConnection();
-            sqlCommand.CommandText = @"INSERT INTO Table_1 VALUES(@nome,@senha)";
+            sqlCommand.CommandText = @"INSERT INTO Student VALUES 
+            (@name, @enrollment, @tel, @cpf, @pass)"
+            ;
 
             sqlCommand.Parameters.AddWithValue("@nome", usuario.Nome);
             sqlCommand.Parameters.AddWithValue("@senha", usuario.Senha);
@@ -82,6 +84,7 @@ namespace Xiao_Music_3
             {
                 connection.CloseConnection();
             }
+
         }
     }
 }
