@@ -40,11 +40,5 @@ namespace Xiao_Music_3
             Cef.Shutdown();
         }
 
-        private void Volta_Click(object sender, EventArgs e)
-        {
-            Form2 Form2 = new Form2();
-            Form2.Show();
-            this.Hide();
-        }
     }
 }

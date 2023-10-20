@@ -14,11 +14,6 @@ namespace Xiao_Music_3
     {
         public List<Usuario> SelectUsuario()
         {
-            //Usuario objeto = new Usuario(
-            //(int)dr["Id"],
-            //(string)dr["nome"],
-            //(string)dr["senha"]
-            //); 
             Connection conn = new Connection();
             SqlCommand sqlCom = new SqlCommand();
 
@@ -32,10 +27,6 @@ namespace Xiao_Music_3
                 //Enquanto for possível continuar a leitura das linhas que foram retornadas na consulta, execute.
                 while (dr.Read())
                 {
-                    int id = (int)dr["id"];
-                    string name = (string)dr["Nome"];
-                    string Senha = (string)dr["Senha"];
-
                     Usuario objeto = new Usuario(
                     (int)dr["Id"],
                     (string)dr["nome"],
@@ -70,10 +61,6 @@ namespace Xiao_Music_3
             sqlCommand.Parameters.AddWithValue("@nome", usuario.Nome);
             sqlCommand.Parameters.AddWithValue("@senha", usuario.Senha);
             sqlCommand.ExecuteNonQuery();
-            MessageBox.Show("Cadastro com sucesso",
-                "AVISO",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Information);
         }
         public void DeleteUsuario(int id)
         {
