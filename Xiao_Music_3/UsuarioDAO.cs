@@ -50,14 +50,14 @@ namespace Xiao_Music_3
             return null;
         }
 
-    public void InsertUsuario(Usuario usuario)
+        public void InsertUsuario(Usuario usuario)
         {
             Connection connection = new Connection();
             SqlCommand sqlCommand = new SqlCommand();
 
             sqlCommand.Connection = connection.ReturnConnection();
             sqlCommand.CommandText = @"INSERT INTO Student VALUES 
-            (@name, @enrollment, @tel, @cpf, @pass)"
+            (@nome, @senha)"
             ;
 
             sqlCommand.Parameters.AddWithValue("@nome", usuario.Nome);
