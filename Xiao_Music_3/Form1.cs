@@ -14,26 +14,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-//Connection connection = new Connection();
-//SqlCommand sqlCommand = new SqlCommand();
-
-//sqlCommand.Connection = connection.ReturnConnection();
-//sqlCommand.CommandText = @"INSERT INTO Table_1 VALUES(@nome,@senha)";
-
-//sqlCommand.Parameters.AddWithValue("@nome", textnome.Text);
-//sqlCommand.Parameters.AddWithValue("@senha", textsenha.Text);
-//sqlCommand.ExecuteNonQuery();
-
 namespace Xiao_Music_3
 {
     public partial class Form1 : Form
     {
-        //se não conseguir abrir o programa vai no Forms3.Cs, e apaga os caminhos da musica(.wav)
-        //Meu programa não está completo ainda preciso arrumar o forms4 e colocar mais musicas, mas o resto está funcionando
-        //se não conseguir abrir o programa vai no Forms3.Cs, e apaga os caminhos da musica(.wav)
-        //Meu programa não está completo ainda preciso arrumar o forms4 e colocar mais musicas, mas o resto está funcionando
-        //se não conseguir abrir o programa vai no Forms3.Cs, e apaga os caminhos da musica(.wav)
-        //Meu programa não está completo ainda preciso arrumar o forms4 e colocar mais musicas, mas o resto está funcionando
         private int id;
         public Form1()
         {
