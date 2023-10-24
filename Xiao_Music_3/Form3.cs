@@ -77,7 +77,16 @@ namespace Xiao_Music_3
             Tanjiro.SoundLocation = @"C:\Users\CJ3016757\Downloads\MusicaXiao_Music\Tanjiro(Kimetsu no Yaiba)ALuzResplandeceHenrique Mendonça.wav";
             Extravagante = new SoundPlayer();
             Extravagante.SoundLocation = @"C:\Users\CJ3016757\Downloads\MusicaXiao_Music\RapdoTenge Uzui(Demon Slayer)EXTRAVAGANTE.wav";
-            //colocar o resto das musicas..
+            SpaceSong = new SoundPlayer();
+            SpaceSong.SoundLocation = @"C:\Users\CJ3016757\Downloads\MusicaXiao_Music\Beach House - Space Song.wav";
+            Lovely = new SoundPlayer();
+            Lovely.SoundLocation = @"C:\Users\CJ3016757\Downloads\MusicaXiao_Music\Billie Eilish, Khalid - lovely (Official Music Video).wav";
+            SelfLove = new SoundPlayer();
+            SelfLove.SoundLocation = @"C:\Users\CJ3016757\Downloads\MusicaXiao_Music\Metro Boomin, Coi Leray - Self Love (Spider-Man： Across the Spider-Verse).wav";
+            YouEI = new SoundPlayer();
+            YouEI.SoundLocation = @"C:\Users\CJ3016757\Downloads\MusicaXiao_Music\One Direction - You & I.wav";
+            transparentsoul = new SoundPlayer();
+            transparentsoul.SoundLocation = @"C:\Users\CJ3016757\Downloads\MusicaXiao_Music\t r a n s p a r e n t s o u l.wav";
 
         }
         private void button1_Click(object sender, EventArgs e)
@@ -216,6 +225,27 @@ namespace Xiao_Music_3
         {
             MeunovoMundo.Play();
         }
+
+        private void pictureBox21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button52_Click(object sender, EventArgs e)
+        {
+            transparentsoul.Play();
+        }
+
+        private void button59_Click(object sender, EventArgs e)
+        {
+            transparentsoul.Stop();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button16_Click(object sender, EventArgs e)
         {
             MeunovoMundo.Stop();
@@ -294,35 +324,35 @@ namespace Xiao_Music_3
         }
         private void button51_Click(object sender, EventArgs e)
         {
-
+            SpaceSong.Play();
         }
         private void button60_Click(object sender, EventArgs e)
         {
-
+            SpaceSong.Stop();
         }
         private void button53_Click(object sender, EventArgs e)
         {
-
+            SelfLove.Play();
         }
         private void button58_Click(object sender, EventArgs e)
         {
-
+            SelfLove.Stop();
         }
         private void button54_Click(object sender, EventArgs e)
         {
-
+            Lovely.Play();
         }
         private void button57_Click(object sender, EventArgs e)
         {
-
+            Lovely.Stop();
         }
         private void button56_Click(object sender, EventArgs e)
         {
-
+            YouEI.Stop();
         }
         private void button55_Click(object sender, EventArgs e)
         {
-
+            YouEI.Play();
         }
     }
 }
