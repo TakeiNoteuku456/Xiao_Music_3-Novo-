@@ -175,7 +175,7 @@ namespace Xiao_Music_3
 
             sqlCommand.Connection = connection.ReturnConnection();
             sqlCommand.CommandText = @"DELETE FROM Table_1 WHERE id = @id";
-            sqlCommand.Parameters.AddWithValue("@id", id);
+            sqlCommand.Parameters.AddWithValue("@id", id);//A
             try
             {
                 sqlCommand.ExecuteNonQuery();
