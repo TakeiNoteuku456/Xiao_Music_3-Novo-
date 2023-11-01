@@ -29,7 +29,7 @@ namespace Xiao_Music_3
         private void InitializeChromium()
         {
             CefSettings settings = new CefSettings();
-            Cef.Initialize(settings);//Tirar o bo~tão de voltar da Chris
+            Cef.Initialize(settings);
 
 
             ChromiumWebBrowser chromeBrowser = new ChromiumWebBrowser("https://www.friv.com/new.html"); //ttps://www.youtube.com/ //ttps://open.spotify.com/intl-pt //ttps://www.friv.com/new.html
