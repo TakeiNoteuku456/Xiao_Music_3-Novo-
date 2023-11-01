@@ -31,7 +31,7 @@ namespace Xiao_Music_3
         {
             listView1.Items.Clear();
             UsuarioDAO usuarioDAO = new UsuarioDAO();
-            List<Usuario> usuarios = new List<Usuario>();
+            List<Usuario> usuarios = usuarioDAO.SelectUsuario();
             try
             {
                 foreach (Usuario usuario in usuarios)
@@ -48,6 +48,7 @@ namespace Xiao_Music_3
             {
                 MessageBox.Show(err.Message);
             }
+
         }
         private void button1_Click(object sender, EventArgs e)
         {

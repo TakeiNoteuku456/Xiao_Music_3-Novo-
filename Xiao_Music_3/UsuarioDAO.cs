@@ -86,5 +86,9 @@ namespace Xiao_Music_3
             }
 
         }
+        public void UpdateUsuario(int id)
+        {
+
+        }
     }
 }
