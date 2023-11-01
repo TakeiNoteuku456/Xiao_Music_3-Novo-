@@ -25,7 +25,7 @@ namespace Xiao_Music_3
             {
                 SqlDataReader dr = sqlCom.ExecuteReader();
 
-                //Enquanto for possível continuar a leitura das linhas que foram retornadas na consulta, execute.
+                //Enquanto for possível continuar a leitura das linhas que foram retornadas na consulta, execute..
                 while (dr.Read())
                 {
                     Usuario objeto = new Usuario(
