@@ -153,6 +153,12 @@ namespace Xiao_Music_3
              MessageBoxButtons.OK,
              MessageBoxIcon.Information
              );
+            //UsuarioDAO dAO = new UsuarioDAO();
+            //dAO.
+            //Insertuser(Id, textBox1.Text, textBox2.Text);
+            //textBox1.Clear();
+            //textBox2.Clear();
+            //UpdateListView();
 
             textnome.Clear();
             textsenha.Clear();
