@@ -32,7 +32,7 @@ namespace Xiao_Music_3
             Cef.Initialize(settings);
 
 
-            ChromiumWebBrowser chromeBrowser = new ChromiumWebBrowser("https://www.friv.com/new.html"); //ttps://www.youtube.com/ //ttps://open.spotify.com/intl-pt //ttps://www.friv.com/new.html
+            ChromiumWebBrowser chromeBrowser = new ChromiumWebBrowser("https://www.youtube.com/"); //ttps://www.youtube.com/ //ttps://open.spotify.com/intl-pt //ttps://www.friv.com/new.html
 
             this.Controls.Add(chromeBrowser);
             chromeBrowser.Dock = DockStyle.Fill;

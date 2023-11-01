@@ -18,7 +18,7 @@ namespace Xiao_Music_3
             SqlCommand sqlCom = new SqlCommand();
 
             sqlCom.Connection = conn.ReturnConnection();
-            sqlCom.CommandText = "SELECT * FROM Student";
+            sqlCom.CommandText = "SELECT * FROM Table_1";
 
             List<Usuario> usuarios = new List<Usuario>();
             try
@@ -56,7 +56,7 @@ namespace Xiao_Music_3
             SqlCommand sqlCommand = new SqlCommand();
 
             sqlCommand.Connection = connection.ReturnConnection();
-            sqlCommand.CommandText = @"INSERT INTO Student VALUES 
+            sqlCommand.CommandText = @"INSERT INTO Table_1 VALUES 
             (@nome, @senha)"
             ;
 
