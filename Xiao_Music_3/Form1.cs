@@ -154,16 +154,8 @@ namespace Xiao_Music_3
              MessageBoxButtons.OK,
              MessageBoxIcon.Information
              );
-            //UsuarioDAO dAO = new UsuarioDAO();
-            //dAO.
-            //Insertuser(Id, textBox1.Text, textBox2.Text);
-            //textBox1.Clear();
-            //textBox2.Clear();
-            //UpdateListView();
-
             textnome.Clear();
             textsenha.Clear();
-
             UpdateListView();
         }
 
@@ -173,9 +165,6 @@ namespace Xiao_Music_3
             Connection connection = new Connection();
             SqlCommand sqlCommand = new SqlCommand();
 
-            sqlCommand.Connection = connection.ReturnConnection();
-            sqlCommand.CommandText = @"DELETE FROM Table_1 WHERE id = @id";
-            sqlCommand.Parameters.AddWithValue("@id", id);//A
             try
             {
                 sqlCommand.ExecuteNonQuery();
@@ -183,10 +172,6 @@ namespace Xiao_Music_3
             catch (Exception err)
             {
                 throw new Exception("Erro: Problemas ao excluir usuário no banco.\n" + err.Message);
-            }
-            finally
-            {
-                connection.CloseConnection();
             }
             textnome.Clear();
             textsenha.Clear();
