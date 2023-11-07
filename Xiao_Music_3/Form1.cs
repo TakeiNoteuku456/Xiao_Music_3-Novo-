@@ -1,4 +1,5 @@
-﻿using InvestimentosMais;
+﻿using CefSharp.DevTools.Database;
+using InvestimentosMais;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -132,46 +133,47 @@ namespace Xiao_Music_3
         private void button4_Click(object sender, EventArgs e)
         {
             string USER_LR = textnome.Text, SENHA = textsenha.Text;
-
-
-            Connection connection = new Connection();
-            SqlCommand sqlCommand = new SqlCommand();
-
-            sqlCommand.Connection = connection.ReturnConnection();
-            sqlCommand.CommandText = @"UPDATE table_1 SET
-            nome = @nome,
-            senha = @senha
-            WHERE id = @id";
-
-            sqlCommand.Parameters.AddWithValue("@nome", textnome.Text);
-            sqlCommand.Parameters.AddWithValue("@senha", textsenha.Text);
-            sqlCommand.Parameters.AddWithValue("@id", id);
-            sqlCommand.ExecuteNonQuery();
-
-            MessageBox.Show(
-             "Login alterado com sucesso !",
-             "AVISO",
-             MessageBoxButtons.OK,
-             MessageBoxIcon.Information
-             );
-            textnome.Clear();
-            textsenha.Clear();
-            UpdateListView();
+            try
+            {
+                Usuario usuario = new Usuario(
+                        id,
+                        textnome.Text,
+                        textsenha.Text);
+                //chamando o metodo de exclusão
+                UsuarioDAO nomeDoObj = new UsuarioDAO();
+                nomeDoObj.UpdateUsuario(usuario);
+                MessageBox.Show(
+                 "Login alterado com sucesso !",
+                 "AVISO",
+                 MessageBoxButtons.OK,
+                 MessageBoxIcon.Information
+                 );
+                textnome.Clear();
+                textsenha.Clear();
+                UpdateListView();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
         }
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            //Código para excluir
-            Connection connection = new Connection();
-            SqlCommand sqlCommand = new SqlCommand();
+            string USER_LR = textnome.Text, SENHA = textsenha.Text;
 
             try
             {
-                sqlCommand.ExecuteNonQuery();
+                    Usuario usuario = new Usuario(
+                            textnome.Text,
+                            textsenha.Text);
+                    //chamando o metodo de exclusão
+                    UsuarioDAO nomeDoObj = new UsuarioDAO();
+                    nomeDoObj.DeleteUsuario(id);
             }
-            catch (Exception err)
+            catch (Exception error)
             {
-                throw new Exception("Erro: Problemas ao excluir usuário no banco.\n" + err.Message);
+                MessageBox.Show(error.Message);
             }
             textnome.Clear();
             textsenha.Clear();

@@ -85,9 +85,24 @@ namespace Xiao_Music_3
                 connection.CloseConnection();
             }
 
+
+
         }
-        public void UpdateUsuario(int id)
+        public void UpdateUsuario(Usuario usuario)
         {
+            Connection connection = new Connection();
+            SqlCommand sqlCommand = new SqlCommand();
+
+            sqlCommand.Connection = connection.ReturnConnection();
+            sqlCommand.CommandText = @"UPDATE table_1 SET
+            nome = @nome,
+            senha = @senha
+            WHERE id = @id";
+
+            sqlCommand.Parameters.AddWithValue("@nome", usuario.Nome);
+            sqlCommand.Parameters.AddWithValue("@senha", usuario.Senha);
+            sqlCommand.Parameters.AddWithValue("@id", usuario.Id);
+            sqlCommand.ExecuteNonQuery();
 
         }
     }
