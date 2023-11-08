@@ -1,4 +1,5 @@
-﻿using InvestimentosMais;
+﻿using CefSharp.DevTools.DOM;
+using InvestimentosMais;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -12,6 +13,41 @@ namespace Xiao_Music_3
 {
     internal class UsuarioDAO
     {
+        public bool LoginUsuario(string usuario, string senha)
+        {
+            Connection conn = new Connection();
+            SqlCommand sqlCom = new SqlCommand();
+
+            sqlCom.Connection = conn.ReturnConnection();
+            sqlCom.CommandText = "SELECT * FROM Table_1 WHERE" +
+                "nome = @nome AND senha = @senha";
+
+            sqlCom.Parameters.AddWithValue("@nome", usuario);
+            sqlCom.Parameters.AddWithValue("@senha", senha);
+
+            try
+            {
+                SqlDataReader dr = sqlCom.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    dr.Close();
+                    return true;
+         
+                }
+                dr.Close();
+                return false;
+            }
+            catch (Exception err)
+            {
+                throw new Exception(
+                    "Erro na leitura de Dados \n" +
+                    err.Message);
+            }
+            finally
+            {
+                conn.CloseConnection();
+            }
+        }
         public List<Usuario> SelectUsuario()
         {
             Connection conn = new Connection();
