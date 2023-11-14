@@ -20,7 +20,7 @@ namespace Xiao_Music_3
 
             sqlCom.Connection = conn.ReturnConnection();
             sqlCom.CommandText = "SELECT * FROM Table_1 WHERE" +
-                "nome = @nome AND senha = @senha";
+                " nome = @nome AND senha = @senha";
 
             sqlCom.Parameters.AddWithValue("@nome", usuario);
             sqlCom.Parameters.AddWithValue("@senha", senha);
