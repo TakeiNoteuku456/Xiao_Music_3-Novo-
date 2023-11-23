@@ -13,14 +13,10 @@ using static System.Net.WebRequestMethods;
 
 namespace Xiao_Music_3
 {
-    public partial class Form3 : Form
+    public partial class Form3 : Form //ttps://drive.google.com/drive/folders/1IAz2YSxnT8KvcsYAYlOGdP3KFWTIZQNe?usp=sharing
     {
-        //se não conseguir abrir o programa vai no Forms3.Cs, e apaga os caminhos da musica(.wav)
-        //se não conseguir abrir o programa vai no Forms3.Cs, e apaga os caminhos da musica(.wav)
-        //se não conseguir abrir o programa vai no Forms3.Cs, e apaga os caminhos da musica(.wav)
-        //Meu programa não está completo ainda preciso arrumar o forms4 e colocar mais musicas, mas o resto está funcionando
-        //Meu programa não está completo ainda preciso arrumar o forms4 e colocar mais musicas, mas o resto está funcionando
-        //Meu programa não está completo ainda preciso arrumar o forms4 e colocar mais musicas, mas o resto está funcionando
+        //se não conseguir abrir o programa vai no Forms3.Cs, e apaga os caminhos da musica(.wav) ou abaixa  pasta
+        // ttps://drive.google.com/drive/folders/1IAz2YSxnT8KvcsYAYlOGdP3KFWTIZQNe?usp=sharing
         SoundPlayer MusicaMarceline, MusicaAki, MusicaGojo, MusicaKurapika, MusicaDanHeng, MusicaChainsaw, MusicaNeon, MusicaJustAwake, MusicaSunflower, MusicaSerotonin, MusicaTaki1;
         SoundPlayer Whativedone, MeunovoMundo, Paradise, TheNights, TheLazySong, HappierThanEver, WaitAMinute, Riptide, LoversRock, Seusol, MakimaDenji, lampadasnegras, Tanjiro, Extravagante;
         SoundPlayer YouEI, Lovely, SelfLove, transparentsoul, SpaceSong;
@@ -242,6 +238,11 @@ namespace Xiao_Music_3
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
