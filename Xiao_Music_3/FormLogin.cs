@@ -28,7 +28,8 @@ namespace Xiao_Music_3
             if (user.LoginUsuario(usuario,senha)) {
                 Form1 tela = new Form1();
                 tela.ShowDialog();
-                this.Close();
+                this.Hide();
+
             }
             else
             {

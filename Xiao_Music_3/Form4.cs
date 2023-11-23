@@ -47,7 +47,7 @@ namespace Xiao_Music_3
         {
             Form2 Form2 = new Form2();
             Form2.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button27_Click(object sender, EventArgs e)

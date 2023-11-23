@@ -24,27 +24,27 @@ namespace Xiao_Music_3
         {
             Form3 Form3 = new Form3();
             Form3.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Form4 Form4 = new Form4();
             Form4.Show();
-            this.Hide();
+            this.Close();
         }
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 Form1 = new Form1();
             Form1.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Youtube Form5 = new Youtube();
             Form5.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

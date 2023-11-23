@@ -79,8 +79,8 @@ namespace Xiao_Music_3
             if (name == "" && senha == "")
             {
                 Form2 Form2 = new Form2();
-                Form2.Show();
-                this.Hide();
+                Form2.ShowDialog();
+                this.Close();
             }
             else
             {
