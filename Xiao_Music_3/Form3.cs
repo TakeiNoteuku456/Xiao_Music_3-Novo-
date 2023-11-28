@@ -410,7 +410,6 @@ namespace Xiao_Music_3
         {
             Lovely.Stop();
             checkBox1.Checked = false;
-
         }
         private void button56_Click(object sender, EventArgs e)
         {
