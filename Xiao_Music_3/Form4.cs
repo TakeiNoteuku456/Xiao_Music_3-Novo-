@@ -17,6 +17,7 @@ namespace Xiao_Music_3
     public partial class Form4 : Form
     {
         private SoundPlayer player;
+        private bool isPlaying = false;
         public Form4()
         {
             InitializeComponent();
@@ -64,6 +65,26 @@ namespace Xiao_Music_3
             if (player != null)
             {
                 player.Stop();
+                isPlaying = false;
+                radioButton1.Checked = false;
+
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                if (!isPlaying)
+                {
+                    player.Play();
+                    isPlaying = true; 
+                }
+                else
+                {
+                    player.Stop();
+                    isPlaying = false;
+                }
             }
         }
     }
