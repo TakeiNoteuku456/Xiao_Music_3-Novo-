@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Media;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace Xiao_Music_3
 {
     public partial class Form1 : Form
     {
+
         private int id;
         public Form1()
         {
@@ -184,6 +186,10 @@ namespace Xiao_Music_3
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
