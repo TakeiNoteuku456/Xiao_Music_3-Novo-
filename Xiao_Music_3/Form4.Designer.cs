@@ -31,10 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.Voltar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.buttonStopMarceline = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // Voltar
@@ -50,7 +49,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(84, 165);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 106);
@@ -58,32 +57,6 @@
             this.button1.Text = "Adicionar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // buttonStopMarceline
-            // 
-            this.buttonStopMarceline.BackColor = System.Drawing.Color.Transparent;
-            this.buttonStopMarceline.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStopMarceline.BackgroundImage")));
-            this.buttonStopMarceline.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonStopMarceline.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonStopMarceline.Location = new System.Drawing.Point(194, 224);
-            this.buttonStopMarceline.Name = "buttonStopMarceline";
-            this.buttonStopMarceline.Size = new System.Drawing.Size(44, 47);
-            this.buttonStopMarceline.TabIndex = 6;
-            this.buttonStopMarceline.UseVisualStyleBackColor = false;
-            this.buttonStopMarceline.Click += new System.EventHandler(this.buttonStopMarceline_Click);
-            // 
-            // button27
-            // 
-            this.button27.BackColor = System.Drawing.Color.Transparent;
-            this.button27.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button27.BackgroundImage")));
-            this.button27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button27.ForeColor = System.Drawing.Color.Transparent;
-            this.button27.Location = new System.Drawing.Point(194, 165);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(44, 47);
-            this.button27.TabIndex = 80;
-            this.button27.UseVisualStyleBackColor = false;
-            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
             // label1
             // 
@@ -100,14 +73,28 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(274, 165);
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(194, 165);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.Size = new System.Drawing.Size(162, 29);
             this.radioButton1.TabIndex = 82;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.Text = "Iniciar Musica";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(194, 242);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(157, 29);
+            this.radioButton2.TabIndex = 83;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Parar Musica";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // Form4
             // 
@@ -116,10 +103,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button27);
-            this.Controls.Add(this.buttonStopMarceline);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Voltar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -134,9 +120,8 @@
 
         private System.Windows.Forms.Button Voltar;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button buttonStopMarceline;
-        private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }

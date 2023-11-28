@@ -87,5 +87,15 @@ namespace Xiao_Music_3
                 }
             }
         }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                player.Stop();
+                isPlaying = false;
+                radioButton1.Checked = false;
+            }
+        }
     }
 }
