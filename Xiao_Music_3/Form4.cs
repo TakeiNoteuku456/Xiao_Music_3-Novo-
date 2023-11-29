@@ -23,10 +23,6 @@ namespace Xiao_Music_3
             InitializeComponent();
         }
 
-        private void TextAdicionar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -80,21 +76,11 @@ namespace Xiao_Music_3
                     player.Play();
                     isPlaying = true; 
                 }
-                else
-                {
-                    player.Stop();
-                    isPlaying = false;
-                }
-            }
-        }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton2.Checked)
             {
-                player.Stop();
-                isPlaying = false;
-                radioButton1.Checked = false;
             }
         }
     }
