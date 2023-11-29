@@ -18,9 +18,10 @@ namespace Xiao_Music_3
     {
         private SoundPlayer player;
         private bool isPlaying = false;
+
         public Form4()
         {
-            InitializeComponent();
+            InitializeComponent();;
         }
 
 
@@ -74,14 +75,21 @@ namespace Xiao_Music_3
                 if (!isPlaying)
                 {
                     player.Play();
-                    isPlaying = true; 
+                    isPlaying = true;
                 }
+                else
+                {
+                    player.Stop();
+                    isPlaying = false;
+                }
+            }
+        }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton2.Checked)
-            {
-            }
+
+           
         }
     }
+
 }

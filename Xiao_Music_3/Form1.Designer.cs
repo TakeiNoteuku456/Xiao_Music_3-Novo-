@@ -42,7 +42,8 @@
             this.colunanome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colunasenha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button5 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.SuspendLayout();
             // 
             // label1
@@ -175,17 +176,20 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
-            // radioButton1
+            // panel1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(388, 618);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 13;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(1525, 442);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(165, 141);
+            this.panel1.TabIndex = 13;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(90, 834);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 14;
             // 
             // Form1
             // 
@@ -194,7 +198,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button1);
@@ -229,7 +234,8 @@
         private System.Windows.Forms.ColumnHeader colunanome;
         private System.Windows.Forms.ColumnHeader colunasenha;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }
 
