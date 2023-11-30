@@ -26,8 +26,8 @@ namespace Xiao_Music_3
             //chamar o metodo que verifica o login
             //o usuário e senha existem na tabela
             if (user.LoginUsuario(usuario,senha)) {
-                Form1 tela = new Form1();
-                tela.ShowDialog();
+                Form2 tela = new Form2();
+                tela.Show();
                 this.Hide();
 
             }
@@ -38,6 +38,13 @@ namespace Xiao_Music_3
                     MessageBoxButtons.OK, 
                     MessageBoxIcon.Error);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form0 tela0 = new Form0();
+            tela0.Show();
+            this.Hide();
         }
     }
 }

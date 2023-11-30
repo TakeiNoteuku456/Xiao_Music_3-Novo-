@@ -20,15 +20,15 @@ namespace Xiao_Music_3
         private void button2_Click(object sender, EventArgs e)
         {
             Form1 Form1 = new Form1();
-            Form1.ShowDialog();
-            this.Close();
+            Form1.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             FormLogin FormLogin = new FormLogin();
-            FormLogin.ShowDialog();
-            this.Close();
+            FormLogin.Show();
+            this.Hide();
         }
     }
 }

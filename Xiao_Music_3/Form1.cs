@@ -80,9 +80,9 @@ namespace Xiao_Music_3
             String senha = textsenha.Text;
             if (name == "" && senha == "")
             {
-                Form2 Form2 = new Form2();
-                Form2.ShowDialog();
-                this.Close();
+                Form0 Form0 = new Form0();
+                Form0.Show();
+                this.Hide();
             }
             else
             {
@@ -190,6 +190,13 @@ namespace Xiao_Music_3
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form0 Form0 = new Form0();
+            Form0.Show();
+            this.Hide();
         }
     }
 }
