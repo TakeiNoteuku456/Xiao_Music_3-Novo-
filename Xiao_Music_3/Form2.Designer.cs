@@ -56,11 +56,11 @@
             this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(198, 153);
+            this.button3.Location = new System.Drawing.Point(198, 430);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(246, 86);
+            this.button3.Size = new System.Drawing.Size(312, 81);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Músicas";
+            this.button3.Text = "Playlist Cauã";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -68,11 +68,11 @@
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(198, 303);
+            this.button4.Location = new System.Drawing.Point(198, 289);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(246, 86);
+            this.button4.Size = new System.Drawing.Size(362, 86);
             this.button4.TabIndex = 7;
-            this.button4.Text = "Adicionar";
+            this.button4.Text = "Adicionar Local";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -81,7 +81,7 @@
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(198, 427);
+            this.button2.Location = new System.Drawing.Point(760, 289);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 86);
             this.button2.TabIndex = 8;
@@ -93,7 +93,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(450, 153);
+            this.pictureBox1.Location = new System.Drawing.Point(541, 412);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 130);
             this.pictureBox1.TabIndex = 9;

@@ -78,7 +78,8 @@ namespace Xiao_Music_3
         {
             String name = textnome.Text;
             String senha = textsenha.Text;
-            if (name == "" && senha == "")
+            UsuarioDAO user = new UsuarioDAO();
+            if (user.LoginUsuario(name, senha))
             {
                 Form0 Form0 = new Form0();
                 Form0.Show();

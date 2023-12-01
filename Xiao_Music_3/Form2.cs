@@ -22,8 +22,8 @@ namespace Xiao_Music_3
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form3 Form3 = new Form3();
-            Form3.Show();
+            FormCadastrar2 Form8 = new FormCadastrar2();
+            Form8.Show();
             this.Hide();
         }
 
@@ -44,6 +44,13 @@ namespace Xiao_Music_3
         {
             Youtube Form5 = new Youtube();
             Form5.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form7 Form7 = new Form7();
+            Form7.Show();
             this.Hide();
         }
     }
