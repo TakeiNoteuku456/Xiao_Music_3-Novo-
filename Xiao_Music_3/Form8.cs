@@ -83,9 +83,6 @@ namespace Xiao_Music_3
         {        
             try
             {
-                string dataString = textBox3.Text;// Supondo que textBox3.Text contenha a string da data
-                DateTime data = DateTime.ParseExact(dataString, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-                
                 //Criar objeto da Classe Usuario
                 Usuario2 usuario2 = new Usuario2(
                     textBox1.Text,
@@ -121,7 +118,6 @@ namespace Xiao_Music_3
         {
             string USER_LR = textBox1.Text, SOBRENOME = textBox2.Text, DATA_STRING = textBox3.Text;
             // Converta a string de data para DateTime
-            DateTime DATA = DateTime.ParseExact(DATA_STRING, "dd/MM/yyyy", CultureInfo.InvariantCulture);
 
             try
             {
@@ -155,7 +151,6 @@ namespace Xiao_Music_3
             string USER_LR = textBox1.Text, SOBRENOME = textBox2.Text, DATA_STRING = textBox3.Text;
             // Converta a string de data para DateTime
             
-            DateTime DATA = DateTime.ParseExact(DATA_STRING, "dd/MM/yyyy", CultureInfo.InvariantCulture);
             try
             {
                 Usuario2 usuario2 = new Usuario2(
