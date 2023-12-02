@@ -82,11 +82,6 @@ namespace Xiao_Music_3
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -143,7 +138,7 @@ namespace Xiao_Music_3
             //o usuário e senha existem na tabela
             if (user2.LoginUsuario2(nome, sobrenome, cpf))
             {
-                Form3 tela = new Form3();
+                FormLP tela = new FormLP();
                 tela.Show();
                 this.Hide();
 
@@ -211,6 +206,13 @@ namespace Xiao_Music_3
             textBox3.Clear();
 
             UpdateListView();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormLP tela = new FormLP();
+            tela.Show();
+            this.Hide();
         }
     }
 }

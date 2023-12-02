@@ -19,9 +19,41 @@ namespace Xiao_Music_3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormCadastrar2 Form8 = new FormCadastrar2();
-            Form8.Show();
+            String nome = textBox1.Text;
+            String sobrenome = textBox2.Text;
+            String cpf = textBox3.Text;
+            //Criar objeto da classe UsuarioDAO
+            UsuarioDAO2 user2 = new UsuarioDAO2();
+            //chamar o metodo que verifica o login
+            //o usuário e senha existem na tabela
+            if (user2.LoginUsuario2(nome, sobrenome, cpf))
+            {
+                Form3 Form3 = new Form3();
+                Form3.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("Verifique os dados inseridos!",
+                    "errou..errou...",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormLP FormLP = new FormLP();
+            FormLP.Show();
             this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = string.Empty;
+            textBox2.Text = string.Empty;
+            textBox3.Text = string.Empty;
         }
     }
 }

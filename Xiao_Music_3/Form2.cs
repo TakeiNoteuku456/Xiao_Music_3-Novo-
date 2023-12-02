@@ -22,8 +22,8 @@ namespace Xiao_Music_3
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FormCadastrar2 Form8 = new FormCadastrar2();
-            Form8.Show();
+            FormLP FormLP = new FormLP();
+            FormLP.Show();
             this.Hide();
         }
 
