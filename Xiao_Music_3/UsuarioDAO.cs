@@ -23,7 +23,6 @@ namespace Xiao_Music_3
                 " nome = @nome AND senha = @senha";
 
             sqlCom.Parameters.AddWithValue("@nome", usuario);
-            sqlCom.Parameters.AddWithValue("@senha", senha);
 
             try
             {

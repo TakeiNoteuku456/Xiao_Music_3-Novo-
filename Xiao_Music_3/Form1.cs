@@ -79,7 +79,7 @@ namespace Xiao_Music_3
             String name = textnome.Text;
             String senha = textsenha.Text;
             UsuarioDAO user = new UsuarioDAO();
-            if (user.LoginUsuario(name, senha))
+
             {
                 Form0 Form0 = new Form0();
                 Form0.Show();
@@ -96,7 +96,6 @@ namespace Xiao_Music_3
                     );
             }
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             try
