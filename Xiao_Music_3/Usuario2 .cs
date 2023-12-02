@@ -12,24 +12,24 @@ namespace Xiao_Music_3
         private int _id;
         private string _nome;
         private string _sobrenome;
-        private DateTime _data;
+        private string _cpf;
 
         public Usuario2(string nome,
             string sobrenome,
-            DateTime data )
+            string cpf )
         {
             Nome = nome;
             Sobrenome = sobrenome;
-            Data = data;
+            Cpf = cpf;
         }
         public Usuario2(int id,
             string nome,
             string sobrenome,
-            DateTime data)
+            string cpf)
         {
             Nome = nome;
             Sobrenome = sobrenome;
-            Data = data;
+            Cpf = cpf;
             Id = id;
         }
         public int Id
@@ -56,10 +56,15 @@ namespace Xiao_Music_3
             }
             get { return _sobrenome; }
         }
-        public DateTime Data
+        public string Cpf
         {
-            set { _data = value; }
-            get { return _data; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                    throw new ArgumentNullException("Campo Nome está vazio");
+                _cpf = value;
+            }
+            get { return _cpf; }
         }
     }
 }

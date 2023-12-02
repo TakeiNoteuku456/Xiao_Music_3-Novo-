@@ -13,18 +13,18 @@ namespace Xiao_Music_3
 {
     internal class UsuarioDAO2
     {
-        public bool LoginUsuario2(string usuario2, string sobrenome, DateTime data)
+        public bool LoginUsuario2(string usuario2, string sobrenome, string cpf)
         {
             Connection conn = new Connection();
             SqlCommand sqlCom = new SqlCommand();
 
             sqlCom.Connection = conn.ReturnConnection();
             sqlCom.CommandText = "SELECT * FROM Table_2 WHERE" +
-                " nome = @nome AND sobrenome = @sobrenome AND datanascimento = @datanascimento ";
+                " nome = @nome AND sobrenome = @sobrenome AND cpf = @cpf ";
 
             sqlCom.Parameters.AddWithValue("@nome", usuario2);
             sqlCom.Parameters.AddWithValue("@sobrenome", sobrenome);
-            sqlCom.Parameters.AddWithValue("@datanascimento", data);
+            sqlCom.Parameters.AddWithValue("@cpf", cpf);
 
             try
             {
@@ -69,7 +69,7 @@ namespace Xiao_Music_3
                     (int)dr["Id"],
                     (string)dr["Nome"],
                     (string)dr["Sobrenome"],
-                    (DateTime)dr["Data"]
+                    (string)dr["Cpf"]
                     );
 
                     usuarios2.Add(objeto);
@@ -95,12 +95,12 @@ namespace Xiao_Music_3
 
             sqlCommand.Connection = connection.ReturnConnection();
             sqlCommand.CommandText = @"INSERT INTO Table_2 VALUES 
-            (@nome, @sobrenome, @datanascimento)"
+            (@nome, @sobrenome, @cpf)"
             ;
 
             sqlCommand.Parameters.AddWithValue("@nome", usuario2.Nome);
             sqlCommand.Parameters.AddWithValue("@sobrenome", usuario2.Sobrenome);
-            sqlCommand.Parameters.AddWithValue("@datanascimento", usuario2.Data);
+            sqlCommand.Parameters.AddWithValue("@cpf", usuario2.Cpf);
             sqlCommand.ExecuteNonQuery();
         }
         public void DeleteUsuario2(int id)
@@ -136,12 +136,12 @@ namespace Xiao_Music_3
             sqlCommand.CommandText = @"UPDATE table_2 SET
             nome = @nome,
             sobrenome = @sobrenome,
-            datanascimento = @datanascimento
+            cpf = @cpf
             WHERE id = @id";
 
             sqlCommand.Parameters.AddWithValue("@nome", usuario2.Nome);
             sqlCommand.Parameters.AddWithValue("@sobrenome", usuario2.Sobrenome);
-            sqlCommand.Parameters.AddWithValue("@datanascimento", usuario2.Data);
+            sqlCommand.Parameters.AddWithValue("@cpf", usuario2.Cpf);
             sqlCommand.Parameters.AddWithValue("@id", usuario2.Id);
             sqlCommand.ExecuteNonQuery();
 
