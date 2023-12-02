@@ -23,9 +23,11 @@ namespace Xiao_Music_3
             String senha = textBox2.Text;
             //Criar objeto da classe UsuarioDAO
             UsuarioDAO user = new UsuarioDAO();
+            // Criar hash da senha inserida pelo usuário
+            string hashSenhaDigitada = SenhaHash.CriarHash(senha);
             //chamar o metodo que verifica o login
             //o usuário e senha existem na tabela
-            if (user.LoginUsuario(usuario,senha)) {
+            if (user.LoginUsuario(usuario, hashSenhaDigitada)) {
                 Form2 tela = new Form2();
                 tela.Show();
                 this.Hide();

@@ -81,6 +81,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SenhaHash.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="Form7.cs">
       <SubType>Form</SubType>

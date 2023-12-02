@@ -50,41 +50,45 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("BankGothic Md BT", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label1.Location = new System.Drawing.Point(83, 98);
+            this.label1.Location = new System.Drawing.Point(111, 121);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 50);
+            this.label1.Size = new System.Drawing.Size(227, 69);
             this.label1.TabIndex = 3;
             this.label1.Text = "NOME:";
             // 
             // textnome
             // 
             this.textnome.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textnome.Location = new System.Drawing.Point(92, 151);
+            this.textnome.Location = new System.Drawing.Point(123, 186);
+            this.textnome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textnome.Name = "textnome";
-            this.textnome.Size = new System.Drawing.Size(515, 62);
+            this.textnome.Size = new System.Drawing.Size(685, 75);
             this.textnome.TabIndex = 4;
             // 
             // labelsenha
             // 
             this.labelsenha.AutoSize = true;
             this.labelsenha.BackColor = System.Drawing.Color.Transparent;
-            this.labelsenha.Font = new System.Drawing.Font("BankGothic Md BT", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelsenha.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.labelsenha.Location = new System.Drawing.Point(83, 259);
+            this.labelsenha.Location = new System.Drawing.Point(111, 319);
+            this.labelsenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelsenha.Name = "labelsenha";
-            this.labelsenha.Size = new System.Drawing.Size(234, 50);
+            this.labelsenha.Size = new System.Drawing.Size(253, 69);
             this.labelsenha.TabIndex = 5;
             this.labelsenha.Text = "SENHA:";
             // 
             // textsenha
             // 
             this.textsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textsenha.Location = new System.Drawing.Point(92, 312);
+            this.textsenha.Location = new System.Drawing.Point(123, 384);
+            this.textsenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textsenha.Name = "textsenha";
             this.textsenha.PasswordChar = '*';
-            this.textsenha.Size = new System.Drawing.Size(515, 62);
+            this.textsenha.Size = new System.Drawing.Size(685, 75);
             this.textsenha.TabIndex = 6;
             // 
             // button2
@@ -92,9 +96,10 @@
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button2.Location = new System.Drawing.Point(92, 413);
+            this.button2.Location = new System.Drawing.Point(123, 508);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(263, 85);
+            this.button2.Size = new System.Drawing.Size(351, 105);
             this.button2.TabIndex = 7;
             this.button2.Text = "LOGIN";
             this.button2.UseVisualStyleBackColor = false;
@@ -104,9 +109,10 @@
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button3.Location = new System.Drawing.Point(388, 413);
+            this.button3.Location = new System.Drawing.Point(517, 508);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 85);
+            this.button3.Size = new System.Drawing.Size(143, 105);
             this.button3.TabIndex = 8;
             this.button3.Text = "Cadastar";
             this.button3.UseVisualStyleBackColor = true;
@@ -116,9 +122,10 @@
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.button4.Location = new System.Drawing.Point(512, 413);
+            this.button4.Location = new System.Drawing.Point(683, 508);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 85);
+            this.button4.Size = new System.Drawing.Size(127, 105);
             this.button4.TabIndex = 9;
             this.button4.Text = "Editar";
             this.button4.UseVisualStyleBackColor = true;
@@ -129,9 +136,10 @@
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Location = new System.Drawing.Point(1525, 98);
+            this.button1.Location = new System.Drawing.Point(2033, 121);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(293, 314);
+            this.button1.Size = new System.Drawing.Size(391, 386);
             this.button1.TabIndex = 10;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -143,9 +151,10 @@
             this.colunanome,
             this.colunasenha});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(92, 600);
+            this.listView1.Location = new System.Drawing.Point(123, 738);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(263, 200);
+            this.listView1.Size = new System.Drawing.Size(349, 245);
             this.listView1.TabIndex = 11;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -168,9 +177,10 @@
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button5.Location = new System.Drawing.Point(388, 504);
+            this.button5.Location = new System.Drawing.Point(517, 620);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(107, 79);
+            this.button5.Size = new System.Drawing.Size(143, 97);
             this.button5.TabIndex = 12;
             this.button5.Text = "deletar";
             this.button5.UseVisualStyleBackColor = true;
@@ -180,24 +190,26 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(1525, 442);
+            this.panel1.Location = new System.Drawing.Point(2033, 544);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(165, 141);
+            this.panel1.Size = new System.Drawing.Size(220, 174);
             this.panel1.TabIndex = 13;
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(90, 834);
+            this.monthCalendar1.Location = new System.Drawing.Point(120, 1026);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 14;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button5);
@@ -211,6 +223,7 @@
             this.Controls.Add(this.textnome);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load_1);

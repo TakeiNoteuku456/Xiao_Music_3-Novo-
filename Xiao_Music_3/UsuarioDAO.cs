@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,16 +21,25 @@ namespace Xiao_Music_3
 
             sqlCom.Connection = conn.ReturnConnection();
             sqlCom.CommandText = "SELECT * FROM Table_1 WHERE" +
-                " nome = @nome AND senha = @senha";
+                " nome = @nome";
 
             sqlCom.Parameters.AddWithValue("@nome", usuario);
 
             try
             {
                 SqlDataReader dr = sqlCom.ExecuteReader();
+                
                 if (dr.HasRows)
                 {
+                    dr.Read();
+                    string hashedSenha = (string)dr["Senha"];
                     dr.Close();
+
+                    // Verificar se a senha fornecida corresponde à senha armazenada no banco de dados
+                    if (VerificarSenha(senha, hashedSenha))
+                    {
+                        return true;
+                    }
                     return true;
          
                 }
@@ -91,12 +101,13 @@ namespace Xiao_Music_3
             SqlCommand sqlCommand = new SqlCommand();
 
             sqlCommand.Connection = connection.ReturnConnection();
-            sqlCommand.CommandText = @"INSERT INTO Table_1 VALUES 
-            (@nome, @senha)"
-            ;
+            sqlCommand.CommandText = @"INSERT INTO Table_1 (nome, senha) VALUES 
+           (@nome, @senha)";
 
             sqlCommand.Parameters.AddWithValue("@nome", usuario.Nome);
-            sqlCommand.Parameters.AddWithValue("@senha", usuario.Senha);
+            // Hash da senha antes de armazenar no banco de dados
+            string hashedSenha = HashSenha(usuario.Senha);
+            sqlCommand.Parameters.AddWithValue("@senha", hashedSenha);
             sqlCommand.ExecuteNonQuery();
         }
         public void DeleteUsuario(int id)
@@ -139,6 +150,22 @@ namespace Xiao_Music_3
             sqlCommand.Parameters.AddWithValue("@id", usuario.Id);
             sqlCommand.ExecuteNonQuery();
 
+        }
+        // Método para verificar se a senha fornecida corresponde à senha armazenada no banco de dados
+        private bool VerificarSenha(string senha, string hashedSenha)
+        {
+            string hashedInputSenha = HashSenha(senha);
+            return string.Equals(hashedSenha, hashedInputSenha);
+        }
+
+        // Método para gerar o hash SHA-256 de uma senha
+        private string HashSenha(string senha)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(senha));
+                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+            }
         }
     }
 }

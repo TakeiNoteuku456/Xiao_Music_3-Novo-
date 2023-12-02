@@ -78,40 +78,50 @@ namespace Xiao_Music_3
         {
             String name = textnome.Text;
             String senha = textsenha.Text;
-            UsuarioDAO user = new UsuarioDAO();
-
+            try
             {
-                Form0 Form0 = new Form0();
-                Form0.Show();
-                this.Hide();
+                UsuarioDAO user = new UsuarioDAO();
+
+                // Criptografar a senha antes de verificar o login
+                string hashedSenha = Usuario.CriptografarSenha(senha);
+
+                if (user.LoginUsuario(name, hashedSenha))
+                {
+                    Form0 Form0 = new Form0();
+                    Form0.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Nome de usuário ou senha incorretos!",
+                        "Erro de Login",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception error)
             {
-
-                String message = "Nome: " + name +
-                                "\nSenha: " + senha;
-                MessageBox.Show(message, "",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-                    );
+                MessageBox.Show(error.Message);
             }
         }
         private void button3_Click(object sender, EventArgs e)
         {
             try
             {
-                //Criar objeto da Classe Usuario
+                // Criar objeto da Classe Usuario
                 Usuario usuario = new Usuario(
                     textnome.Text,
-                    textsenha.Text);
-                //chamando o metodo de exclusão
+                    textsenha.Text
+                );
+
+                // Chamando o método de inserção
                 UsuarioDAO nomeDoObj = new UsuarioDAO();
                 nomeDoObj.InsertUsuario(usuario);
 
                 MessageBox.Show("Cadastro com sucesso",
-                "AVISO",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Information);
+                    "AVISO",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
 
                 textnome.Clear();
                 textsenha.Clear();

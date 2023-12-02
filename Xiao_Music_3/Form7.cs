@@ -19,7 +19,7 @@ namespace Xiao_Music_3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String nome = textBox1.Text;
+            String nome = maskedTextBox1.Text;
             String sobrenome = textBox2.Text;
             String cpf = textBox3.Text;
             //Criar objeto da classe UsuarioDAO
@@ -51,9 +51,31 @@ namespace Xiao_Music_3
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox1.Text = string.Empty;
+            maskedTextBox1.Text = string.Empty;
             textBox2.Text = string.Empty;
             textBox3.Text = string.Empty;
+        }
+
+        private void textBox3_TextChanged_1(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBox3.Text))
+            {
+                // Remove qualquer formatação existente
+                string cpfSemFormato = textBox3.Text.Replace(".", "").Replace("-", "");
+
+                // Verifica se o CPF tem 11 dígitos
+                if (cpfSemFormato.Length == 11)
+                {
+                    // Formata o CPF com pontos e traço
+                    string cpfFormatado = Convert.ToUInt64(cpfSemFormato).ToString(@"000\.000\.000\-00");
+
+                    // Atualiza o texto do TextBox
+                    textBox3.Text = cpfFormatado;
+
+                    // Move o cursor para o final do texto
+                    textBox3.SelectionStart = textBox3.Text.Length;
+                }
+            }
         }
     }
 }
