@@ -15,12 +15,18 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Net;
+using System.Net.Mail;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Xiao_Music_3
 {
     public partial class Form1 : Form
     {
-
+        private readonly string DataBase = "Xiao_Music";
         private int id;
         public Form1()
         {
@@ -176,7 +182,9 @@ namespace Xiao_Music_3
 
             try
             {
-                    Usuario usuario = new Usuario(
+                //cria um objeto da classe e o instancia com os valores provenientes
+                //dos campos de texto
+                Usuario usuario = new Usuario(
                             textnome.Text,
                             textsenha.Text);
                     //chamando o metodo de exclusão
@@ -207,6 +215,70 @@ namespace Xiao_Music_3
             Form0 Form0 = new Form0();
             Form0.Show();
             this.Hide();
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            // Cria uma instância do SaveFileDialog
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+            // Define as propriedades do SaveFileDialog
+            saveFileDialog.Filter = "Arquivos PDF (*.pdf)|*.pdf|Todos os arquivos (*.*)|*.*";
+            saveFileDialog.FilterIndex = 1;
+            saveFileDialog.RestoreDirectory = true;
+
+            // Exibe o diálogo e verifica se o usuário pressionou OK
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                /// Obtém o caminho escolhido pelo usuário
+                string filePath = saveFileDialog.FileName;
+
+                // Conexão com o banco de dados SQL Server
+                string stringConnection = @"Data Source="
+                         + Environment.MachineName +
+                         @"\SQLEXPRESS;Initial Catalog=" +
+                         DataBase + ";Integrated Security=true";
+                SqlConnection connection = new SqlConnection(stringConnection);
+                connection.Open();
+
+                // Consulta SQL para recuperar as informações
+                string query = "SELECT nome, senha FROM Table_1";
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                // Cria um novo documento PDF
+                Document document = new Document();
+
+                try
+                { // Cria um PdfWriter usando o caminho escolhido pelo usuário
+                    PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
+
+                    // Abre o documento antes de adicionar elementos
+                    document.Open();
+
+                    // Cria uma nova tabela e adiciona as informações recuperadas
+                    PdfPTable table = new PdfPTable(2);
+                    table.AddCell("nome");
+                    table.AddCell("senha");
+
+                    while (reader.Read())
+                    {
+                        table.AddCell(reader["nome"].ToString());
+                        table.AddCell(reader["senha"].ToString());
+                    }
+
+                    // Adiciona a tabela ao documento
+                    document.Add(table);
+
+                    MessageBox.Show("Relatório gerado com sucesso", "Êxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                finally
+                {
+                    // Fecha o documento e a conexão com o banco de dados
+                    document.Close();
+                    connection.Close();
+                }
+            }
         }
     }
 }

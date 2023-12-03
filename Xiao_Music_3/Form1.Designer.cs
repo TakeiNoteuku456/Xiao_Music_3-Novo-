@@ -44,6 +44,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -63,7 +64,7 @@
             // 
             this.textnome.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textnome.Location = new System.Drawing.Point(123, 186);
-            this.textnome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textnome.Margin = new System.Windows.Forms.Padding(4);
             this.textnome.Name = "textnome";
             this.textnome.Size = new System.Drawing.Size(685, 75);
             this.textnome.TabIndex = 4;
@@ -85,7 +86,7 @@
             // 
             this.textsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textsenha.Location = new System.Drawing.Point(123, 384);
-            this.textsenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textsenha.Margin = new System.Windows.Forms.Padding(4);
             this.textsenha.Name = "textsenha";
             this.textsenha.PasswordChar = '*';
             this.textsenha.Size = new System.Drawing.Size(685, 75);
@@ -97,7 +98,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button2.Location = new System.Drawing.Point(123, 508);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(351, 105);
             this.button2.TabIndex = 7;
@@ -110,7 +111,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button3.Location = new System.Drawing.Point(517, 508);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 105);
             this.button3.TabIndex = 8;
@@ -123,7 +124,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.button4.Location = new System.Drawing.Point(683, 508);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(127, 105);
             this.button4.TabIndex = 9;
@@ -137,7 +138,7 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.Location = new System.Drawing.Point(2033, 121);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(391, 386);
             this.button1.TabIndex = 10;
@@ -152,7 +153,7 @@
             this.colunasenha});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(123, 738);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(349, 245);
             this.listView1.TabIndex = 11;
@@ -178,7 +179,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button5.Location = new System.Drawing.Point(517, 620);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(143, 97);
             this.button5.TabIndex = 12;
@@ -191,7 +192,7 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Location = new System.Drawing.Point(2033, 544);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 174);
             this.panel1.TabIndex = 13;
@@ -203,6 +204,18 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 14;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(517, 738);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(104, 83);
+            this.button6.TabIndex = 15;
+            this.button6.Text = "Gerar PDF";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -210,6 +223,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button5);
@@ -223,7 +237,7 @@
             this.Controls.Add(this.textnome);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load_1);
@@ -249,6 +263,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Button button6;
     }
 }
 
