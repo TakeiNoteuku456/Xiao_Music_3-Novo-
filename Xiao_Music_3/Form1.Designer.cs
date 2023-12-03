@@ -210,7 +210,7 @@
             this.button6.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(517, 738);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(104, 83);
+            this.button6.Size = new System.Drawing.Size(125, 98);
             this.button6.TabIndex = 15;
             this.button6.Text = "Gerar PDF";
             this.button6.UseVisualStyleBackColor = false;
