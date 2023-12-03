@@ -123,9 +123,6 @@ namespace Xiao_Music_3
             {
                 connection.CloseConnection();
             }
-
-
-
         }
         public void UpdateUsuario2(Usuario2 usuario2)
         {
